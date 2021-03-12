@@ -174,23 +174,23 @@
     
     if (nImages>0 && nVideos>0)
     {
-        return [NSString stringWithFormat:NSLocalizedStringFromTable(@"picker.selection.multiple-items", @"GMImagePicker", @"%@ Items Selected" ), @(nImages+nVideos)];
+        return [NSString stringWithFormat:@"%@ アイテム 選択", @(nImages+nVideos)];
     }
     else if (nImages>1)
     {
-        return [NSString stringWithFormat:NSLocalizedStringFromTable(@"picker.selection.multiple-photos", @"GMImagePicker", @"%@ Photos Selected"), @(nImages)];
+        return [NSString stringWithFormat:@"%@ 写真 選択", @(nImages)];
     }
     else if (nImages==1)
     {
-        return NSLocalizedStringFromTable(@"picker.selection.single-photo", @"GMImagePicker", @"1 Photo Selected" );
+        return @"1 写真 選択";
     }
     else if (nVideos>1)
     {
-        return [NSString stringWithFormat:NSLocalizedStringFromTable(@"picker.selection.multiple-videos", @"GMImagePicker", @"%@ Videos Selected"), @(nVideos)];
+        return [NSString stringWithFormat:@"%@ ビデオ 選択", @(nVideos)];
     }
     else if (nVideos==1)
     {
-        return NSLocalizedStringFromTable(@"picker.selection.single-video", @"GMImagePicker", @"1 Video Selected");
+        return @"1 ビデオ 選択";
     }
     else
     {
